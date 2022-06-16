@@ -4410,10 +4410,12 @@ app.post('/api/users/login/', (request, response) => {
     let x = request.body
     let req1 = users.find(ele => ele.username == x.username)
     let req2 = users.find(ele => ele.email == x.email)
+    let iddi = users.find(ele => ele.id == req1.id)
     if (req1 == undefined || req2 == undefined || req1 == undefined && req2 == undefined) {
         response.json('no');
     } else {
-        response.json('si')
+        response.json(iddi)
+
     }
 
 })
@@ -4459,12 +4461,23 @@ app.get('/api/post/:userId', (request, response) => {
     response.json(pippo);
 })
 
+let countPost = 101
+app.post('/api/post/', (request, response) => {
+    const newpost = request.body;
+    console.log(newpost);
+    newpost.id = countPost++;
+    post.push(newpost);
+    response.json('Hai aggiunto un nuovo post');
+})
 
 /* ------------------------- COMMENTI ----------------------------------- */
 /* GET  */
-/* app.get('/api/commenti/', (request, response) => {
-    response.json(commenti);
-}) */
+
+app.get('/api/commenti/:postId', (request, response) => {
+    const idP = request.params.postId;
+    let pippo = commenti.filter(ele => ele.postId == idP);
+    response.json(pippo);
+})
 
 
 

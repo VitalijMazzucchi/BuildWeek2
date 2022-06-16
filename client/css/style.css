@@ -1,9 +1,27 @@
 /* Variabili */
+/* white; */
+#login,
+#registrati {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+}
+
 body {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
-  background-color: #dedff1;
+  background-color: #F0F2F5;
+  text-align: center;
 }
 
 body h1 {
@@ -39,11 +57,11 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #273b7a;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.459);
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.459);
   color: white;
-  margin-bottom: 3rem;
-  -webkit-box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 2rem;
 }
 
 body header div:first-child {
@@ -63,37 +81,37 @@ body button {
   font-size: 1rem;
   padding: 0.8rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  width: 50%;
+  width: 100%;
   margin: 1rem auto;
   background-color: #eb9e35;
   color: white;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 body button:hover {
-  background-color: #b96c03;
+  background-color: #eb9e35;
 }
 
 body #claudia,
 body #claudia2 {
   text-align: center;
-  width: 50%;
-  margin: 0 auto;
+  width: 20rem;
+  margin: 6rem auto;
   border-radius: 10px;
   padding: 2rem;
   background-color: white;
-  -webkit-box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.46);
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.46);
 }
 
 body #claudia input,
 body #claudia2 input {
-  width: 50%;
+  width: 100%;
   display: block;
   margin: 1rem auto;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0.8rem;
   border: 1px solid lightgrey;
   -webkit-box-sizing: border-box;
@@ -110,15 +128,18 @@ body #claudia2 #Ricordami {
 body #claudia img,
 body #claudia2 img {
   display: inline-block;
-  margin-top: -10rem;
+  margin-top: -9rem;
+  width: 200px;
+  height: 200px;
 }
 
-body form a:nth-child(5) button {
+body form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body form a:nth-child(1) button {
   background-color: #273b7a;
-}
-
-body form a:nth-child(5) button:hover {
-  background-color: #000948;
 }
 
 body form div {
@@ -152,11 +173,14 @@ body button a {
 }
 
 body footer {
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  height: 5rem;
   margin-top: 2rem;
-  background-color: #273b7a;
   text-align: center;
   padding: 2rem;
-  color: white;
+  color: #273b7a;
 }
 
 body footer section {
@@ -178,7 +202,7 @@ body footer p {
 
 body footer a {
   text-decoration: none;
-  color: white;
+  color: #273b7a;
 }
 
 /* PAGINA CHI SIAMO */
@@ -196,11 +220,15 @@ body footer a {
 
 .chi div {
   margin: 2rem auto;
-  width: 20%;
-  border: 3px solid #3ac218;
+  width: 10rem;
+  background-color: #eee;
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
+}
+
+.chi div img {
+  margin-bottom: 5px;
 }
 
 /* HOMEPAGE */
@@ -244,6 +272,176 @@ body footer a {
   background-color: #4466d6;
   font-size: 0.8rem;
   padding: 1rem;
+}
+
+/* -------------------- HOMEPAGE -------------------- */
+#homepage a {
+  font-size: 0.8rem;
+}
+
+#homepage header {
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  height: 5rem;
+  margin-bottom: 4rem;
+}
+
+#homepage header img {
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+}
+
+#homepage header .bi {
+  color: #273b7a;
+  margin-left: 3rem;
+}
+
+#homepage header .bi-bell {
+  font-size: 0.9rem;
+}
+
+#homepage header input {
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  padding: 8px;
+  margin-right: 4rem;
+}
+
+#homepage main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sinistra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sinistra .profilo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-left: 2rem;
+  width: 16rem;
+}
+
+.sinistra .profilo img {
+  width: 80px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+}
+
+.sinistra .profilo .info {
+  text-align: start;
+  margin-left: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.sinistra .info-personali {
+  text-align: start;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  margin: 2rem 2rem;
+  width: 16rem;
+  line-height: 1.5rem;
+}
+
+.sinistra .info-personali button {
+  background-color: white;
+  color: black;
+  border: 1px solid #eb9e35;
+}
+
+.centro {
+  width: 30rem;
+}
+
+.centro .newpost input {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
+  background-color: #eee;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.destra .contacts {
+  margin-right: 2rem;
+}
+
+.destra .contacts .informazioni {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.destra .contacts .informazioni img {
+  width: 50px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+}
+
+.destra .contacts .informazioni span {
+  font-size: 0.8rem;
+  padding: 5px;
+  margin: 1rem;
+}
+
+.destra .contacts button {
+  width: 3.5rem;
+  display: inline-block;
+  background-color: #273b7a;
+  margin: 0;
+}
+
+.destra .contacts button .i {
+  margin: 5px;
+}
+
+.destra .contacts .more-info {
+  overflow: hidden;
 }
 
 /* Pagina REGISTRATI */

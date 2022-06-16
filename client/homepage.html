@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Sito Brutto</title>
+    <title>Simple - Homepage</title>
 
     <link rel="stylesheet" href="css/Reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,44 +18,97 @@
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body id="homepage">
     <header>
         <div>
             <a href="homepage.html"><img src="images/logo.png" alt="" width="100" height="100"></a>
-            <h1>Simplemente</h1>
         </div>
         <div>
-            <input type="search" placeholder="Search">
-            <i class="bi bi-zoom-in"></i>
+            <a href=""><i class="bi bi-house-heart"></i></a>
+            <a href=""><i class="bi bi-people"></i></a>
+            <a href=""><i class="bi bi-bell"></i></a>
+            <a href=""><i class="bi bi-envelope-heart"></i></a>
+            <a onclick="logout()"><i class="bi bi-box-arrow-left"></i></a>
         </div>
+        <!--  <div>
+            <input type="search" placeholder="Search">
+
+        </div> -->
     </header>
 
-    <div>
-        <div class="profilo">
-            <!-- sezione dati account -->
-        </div>
-    </div>
 
 
-    <main class="home">
-        <div>
-            <div class="newpost">
-                <!-- sezione crea post -->
-                <textarea></textarea>
-                <input type="submit" value="Aggiungi Post">
-            </div>
-
-            <div class="allPost">
-                <!-- sezione post -->
-
-
+    <main>
+        <div class="sinistra">
+            <div class="profilo">
+                <!-- CREARE DINAMICAMENTE IN BASE A CHI EFFETTUA LOGIN -->
+                <!-- <div class="immagine">
+                    <img src="images/placeholder.png" alt="">
+                </div>
+                <div class="info">
+                    <p> Nome e Cognome</p>
+                    <p>Città</p>
+                </div> -->
 
             </div>
+            <a href="tel:+"></a>
+            <div class="info-personali">
+                <!-- CREARE DINAMICAMENTE IN BASE A CHI EFFETTUA LOGIN -->
+                <!-- DECIDERE QUALI CAMPI FAR VEDERE -->
+                <!-- <p> Indirizzo: </p>
+                <p>Email: </p>
+                <p>Campo: </p>
+                <p>Campo: </p>
+                <p>Campo: </p>
+                <button>Modifica dati</button> -->
+                <!-- da vedere se si fa in tempo -->
+            </div>
+
+            <div class="info-personali">
+                <p> <i class="bi bi-play-btn"></i> Learning </p>
+                <p><i class="bi bi-bar-chart-line"></i> Statistic </p>
+                <p><i class="bi bi-bookmark-heart"></i> Bookmarks </p>
+                <p><i class="bi bi-joystick"></i> Gaming</p>
+                <p><i class="bi bi-share"></i> Share </p>
+            </div>
+        </div>
+
+        <div class="centro">
+            <div>
+                <div class="newpost">
+                    <input type="text" name="tito" id="" placeholder="Dai un titolo al tuo post... ">
+                    <input type="text" name="contpost" id="" placeholder="Contenuto del post">
+                    <button onclick="aggiungiPost()">Aggiungi Post</button>
+                </div>
+
+                <div class="allPost">
+                    <!-- sezione post -->
+
+
+
+                </div>
+            </div>
+
         </div>
 
 
+        <div class="destra">
+            <div>
+                <input id="filtroInput" type="search" placeholder="Search">
+            </div>
 
+            <div class="contacts">
+
+            </div>
+
+        </div>
     </main>
+
+
+
+
+
+
 
     <footer>
         <section>

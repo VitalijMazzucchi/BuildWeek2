@@ -1,7 +1,8 @@
 /* Variabili */
 $color1: #eb9e35;
 $color2: #273b7a;
-$color_body: rgb(222, 223, 241);
+$color_body: #F0F2F5;
+/* white; */
 $color-input: #eee;
 $font : 'Montserrat',
 sans-serif;
@@ -9,11 +10,25 @@ $medio-grande: 1.2rem;
 $medio: 1rem;
 $piccolo: 0.8rem;
 
+#login,
+#registrati {
+    display: flex;
+    align-items: center;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+}
+
 body {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     font-family: $font;
     background-color: $color_body;
+    text-align: center;
+
 
     h1 {
         font-size: $medio-grande;
@@ -39,10 +54,10 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background-color: $color2;
+        background-color: white;
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.459);
         color: white;
-        margin-bottom: 3rem;
-        box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+        margin-bottom: 2rem;
 
         div:first-child {
             display: flex;
@@ -55,34 +70,34 @@ body {
         font-size: $medio;
         padding: 0.8rem;
         border: none;
-        border-radius: 4px;
+        border-radius: 5px;
         cursor: pointer;
-        width: 50%;
+        width: 100%;
         margin: 1rem auto;
         background-color: $color1;
         color: white;
-        border-radius: 50px;
+        border-radius: 5px;
 
         &:hover {
-            background-color: $color1 - 50;
+            background-color: $color1;
         }
     }
 
     #claudia,
     #claudia2 {
         text-align: center;
-        width: 50%;
-        margin: 0 auto;
+        width: 20rem;
+        margin: 6rem auto;
         border-radius: 10px;
         padding: 2rem;
         background-color: white;
-        box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.46);
 
         input {
-            width: 50%;
+            width: 100%;
             display: block;
             margin: 1rem auto;
-            border-radius: 20px;
+            border-radius: 5px;
             padding: 0.8rem;
             border: 1px solid lightgrey;
             box-sizing: border-box;
@@ -96,19 +111,19 @@ body {
 
         img {
             display: inline-block;
-            margin-top: -10rem;
+            margin-top: -9rem;
+            width: 200px;
+            height: 200px;
         }
     }
 
     form {
+        width: 90%;
+        margin: 0 auto;
 
-        a:nth-child(5) {
+        a:nth-child(1) {
             button {
                 background-color: $color2;
-
-                &:hover {
-                    background-color: $color2 - 50;
-                }
             }
         }
 
@@ -142,11 +157,13 @@ body {
 
 
     footer {
+        background-color: white;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        height: 5rem;
         margin-top: 2rem;
-        background-color: $color2;
         text-align: center;
         padding: 2rem;
-        color: white;
+        color: $color2;
 
         section {
             display: flex;
@@ -161,14 +178,9 @@ body {
 
         a {
             text-decoration: none;
-            color: white;
+            color: $color2;
         }
     }
-
-
-
-
-
 }
 
 /* PAGINA CHI SIAMO */
@@ -179,11 +191,15 @@ body {
 
     div {
         margin: 2rem auto;
-        width: 20%;
-        border: 3px solid rgb(58, 194, 24);
+        width: 10rem;
+        background-color: $color-input;
         border-radius: 5px;
         padding: 1rem;
         text-align: center;
+
+        img {
+            margin-bottom: 5px;
+        }
     }
 
 }
@@ -224,8 +240,6 @@ body {
                 background-color: #4466d6;
                 font-size: $piccolo;
                 padding: 1rem;
-
-                &:hover {}
             }
         }
     }
@@ -237,8 +251,168 @@ body {
 }
 
 
+/* -------------------- HOMEPAGE -------------------- */
+
+#homepage {
+    a {
+        font-size: 0.8rem;
+    }
+
+    header {
+        background-color: white;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        height: 5rem;
+        margin-bottom: 4rem;
+
+        img {
+            width: 7rem;
+            height: 7rem;
+            margin-bottom: 1rem;
+            margin-left: 4rem;
+
+        }
+
+        .bi {
+            color: $color2;
+            margin-left: 3rem;
+        }
+
+        .bi-bell {
+            font-size: 0.9rem;
+        }
+
+        input {
+            border-radius: 5px;
+            border: none;
+            background-color: #eee;
+            padding: 8px;
+            margin-right: 4rem;
+        }
+    }
+}
+
+#homepage {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 
+
+.sinistra {
+    display: flex;
+    flex-direction: column;
+
+    .profilo {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(246, 246, 246);
+        border-radius: 5px;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        margin-left: 2rem;
+        width: 16rem;
+
+        img {
+            width: 80px;
+            border: 1px solid lightgray;
+            border-radius: 50%;
+
+        }
+
+        .info {
+            text-align: start;
+            margin-left: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .info-personali {
+        text-align: start;
+        padding: 10px;
+        background-color: rgb(246, 246, 246);
+        border-radius: 5px;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        margin: 2rem 2rem;
+        width: 16rem;
+        line-height: 1.5rem;
+
+        button {
+            background-color: white;
+            color: black;
+            border: 1px solid $color1;
+        }
+    }
+}
+
+
+.centro {
+    width: 30rem;
+
+    .newpost {
+        input {
+            display: block;
+            width: 100%;
+            margin: 0 0 0.5rem;
+            background-color: $color-input;
+            padding: 1rem;
+            box-sizing: border-box;
+            border: none;
+            box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+    }
+}
+
+
+.destra {
+    .contacts {
+        margin-right: 2rem;
+
+        .informazioni {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: rgb(246, 246, 246);
+            border-radius: 5px;
+            box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+            width: 100%;
+            height: 4rem;
+            box-sizing: border-box;
+
+            align-content: space-around;
+
+            img {
+                width: 50px;
+                border: 1px solid lightgray;
+                border-radius: 50%;
+
+            }
+
+            span {
+                font-size: $piccolo;
+                padding: 5px;
+                margin: 1rem;
+            }
+        }
+
+        button {
+
+            width: 3.5rem;
+            display: inline-block;
+            background-color: $color2;
+            margin: 0;
+
+            .i {
+                margin: 5px;
+            }
+        }
+
+        .more-info {
+            overflow: hidden;
+        }
+    }
+}
 
 
 
