@@ -1,0 +1,250 @@
+/* Variabili */
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  background-color: #dedff1;
+}
+
+body h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body p {
+  font-size: 0.8rem;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #273b7a;
+  color: white;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+body header div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body button {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  margin: 1rem auto;
+  background-color: #eb9e35;
+  color: white;
+  border-radius: 50px;
+}
+
+body button:hover {
+  background-color: #b96c03;
+}
+
+body #claudia,
+body #claudia2 {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: white;
+  -webkit-box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+body #claudia input,
+body #claudia2 input {
+  width: 50%;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 20px;
+  padding: 0.8rem;
+  border: 1px solid lightgrey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #eee;
+}
+
+body #claudia #Ricordami,
+body #claudia2 #Ricordami {
+  margin: 0;
+  width: 5%;
+}
+
+body #claudia img,
+body #claudia2 img {
+  display: inline-block;
+  margin-top: -10rem;
+}
+
+body form a:nth-child(5) button {
+  background-color: #273b7a;
+}
+
+body form a:nth-child(5) button:hover {
+  background-color: #000948;
+}
+
+body form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+}
+
+body form div label {
+  margin-left: 5px;
+}
+
+body form p {
+  font-size: 0.8rem;
+}
+
+body button a {
+  text-decoration: none;
+  color: black;
+}
+
+body footer {
+  margin-top: 2rem;
+  background-color: #273b7a;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+body footer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2rem auto;
+}
+
+body footer p {
+  font-size: 0.8rem;
+}
+
+body footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* PAGINA CHI SIAMO */
+.chi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.chi div {
+  margin: 2rem auto;
+  width: 20%;
+  border: 3px solid #3ac218;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* HOMEPAGE */
+.home div {
+  width: 60%;
+}
+
+.home .newpost {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .newpost textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem auto;
+}
+
+.home .newpost input {
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.home .allPost div {
+  background-color: white;
+  -webkit-box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
+  margin: 1rem auto;
+  padding: 2rem;
+}
+
+.home .allPost div button {
+  background-color: #4466d6;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+/* Pagina REGISTRATI */
+/*# sourceMappingURL=style.css.map */
