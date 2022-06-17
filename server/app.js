@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-let count = 11;
+
 let users = [
     {
         "id": 1,
@@ -4398,10 +4398,11 @@ app.get('/api/users/:id', (request, response) => {
 
 
 // POST
+let countUsers = 11
 app.post('/api/users/', (request, response) => {
-    const obj = request.body;
+    let obj = request.body;
     console.log(obj);
-    obj.id = count++;
+    obj.id = countUsers++;
     users.push(obj);
     response.json('Utente Aggiunto nel DB');
 })
@@ -4410,14 +4411,12 @@ app.post('/api/users/login/', (request, response) => {
     let x = request.body
     let req1 = users.find(ele => ele.username == x.username)
     let req2 = users.find(ele => ele.email == x.email)
-    let iddi = users.find(ele => ele.id == req1.id)
     if (req1 == undefined || req2 == undefined || req1 == undefined && req2 == undefined) {
-        response.json('no');
+        response.json('errore');
     } else {
-        response.json(iddi)
-
+        let id = users.find(ele => +ele.id == +req1.id)
+        response.json(id)
     }
-
 })
 
 
@@ -4473,6 +4472,10 @@ app.post('/api/post/', (request, response) => {
 /* ------------------------- COMMENTI ----------------------------------- */
 /* GET  */
 
+app.get('/api/commenti/', (request, response) => {
+    response.json(commenti);
+})
+
 app.get('/api/commenti/:postId', (request, response) => {
     const idP = request.params.postId;
     let pippo = commenti.filter(ele => ele.postId == idP);
@@ -4495,6 +4498,6 @@ app.get('/api/commenti/:postId', (request, response) => {
 
 
 
+
+
 app.listen(port, () => console.log('Server attivo sulla porta 3000'));
-
-
