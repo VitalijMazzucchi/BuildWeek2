@@ -2,7 +2,7 @@
 function registrati() {
 
     let obj = {
-        nome: document.querySelector('form input:first-of-type').value,
+        name: document.querySelector('form input:first-of-type').value,
         username: document.querySelector('form  input:nth-child(2)').value,
         email: document.querySelector('form  input:nth-child(3)').value,
         address: {
@@ -60,6 +60,8 @@ function login() {
 
 
 
+
+
 // homepage
 document.addEventListener('DOMContentLoaded', function () {
     stampaPost()
@@ -84,8 +86,31 @@ function profilo() {
                             <p>My City: ${francesca.address.city}, ${francesca.address.street}, ${francesca.address.zipcode}
                             <p><a href= ${francesca.website}">My website: ${francesca.website}</a></p>
                             <p><a href="tel:${francesca.phone}">My number: ${francesca.phone}</a></p>
-                            <button onclick="modificaDati()">Modifica dati</button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Modifica</button>
                         `
+}
+function modificaDati() {
+    let iden = localStorage.getItem('users')
+    let id = JSON.parse(iden)
+    console.log(id)
+    fetch('https://localhost:3000/api/users/' + id.id, {
+        method: "PUT",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            id: id.id,
+            nome: document.querySelector('.modal-body form input:nth-child(1)').value,
+            username: document.querySelector('.modal-body form input:nth-child(2)').value,
+            email: document.querySelector('.modal-body form input:nth-child(3)').value,
+            address: {
+                street: document.querySelector('.modal-body form input:nth-child(4)').value,
+                suite: document.querySelector('.modal-body form input:nth-child(5)').value,
+                city: document.querySelector('.modal-body form input:nth-child(6)').value,
+                zipcode: document.querySelector('.modal-body form input:nth-child(7)').value,
+            },
+            phone: document.querySelector('.modal-body form input:nth-child(8)').value,
+            website: document.querySelector('.modal-body form input:nth-child(9)').value,
+        })
+    }).then(response => response.json()).then(json => console.log(json))
 }
 
 function stampaPost() {
@@ -97,7 +122,7 @@ function stampaPost() {
 
             json.reverse().forEach(ele => {
                 let div = document.createElement('div')
-                div.innerHTML = `
+                div.innerHTML = `<img src="https://picsum.photos/200/300?random=1%22%3E">
                                 <h3>${ele.title}</h3>
                                 <p>${ele.body}</p>
                                 <button onclick="vediCommenti(${ele.id})">Vedi i commenti</button>`;
@@ -175,9 +200,7 @@ function info(id) {
     }
 }
 
-/* function modificaDati(){
 
-} */
 
 
 
@@ -217,20 +240,40 @@ function vediCommenti(id) {
             .then(res => res.json())
             .then(json => {
                 json.forEach(ele => {
-                    let titolo = document.createElement('p');
+                    /*  let titolo = document.createElement('p'); */
                     let commento = document.createElement('p');
-                    titolo.innerText = ele.name;
-                    titolo.className = 'titolo';
-                    commento.innerText = ele.body;
+                    /* titolo.innerText = ele.name; */
+                    /*   titolo.className = 'titolo'; */
+                    commento.innerHTML = `<i class="bi bi-chat-quote"></i>
+                                         <span>${ele.body}</span>`
                     commento.className = 'commento';
 
-                    divinfo.appendChild(titolo);
+                    /* divinfo.appendChild(titolo); */
                     divinfo.appendChild(commento);
                 })
             })
     }
 }
 
+/* window.onscroll = function () { scrolling() };
+
+
+function scrolling() {
+
+    let y = document.documentElement.scrollTop
+
+    console.log(y)
+    if (y > 600) {
+        console.log('ciao')
+        let div = document.querySelector('.centro')
+        div.style.height += (y + 200).toString() + 'px'
+        if (y >= 600) {
+            y = 0;
+        }
+    }
+
+};
+ */
 
 
 
@@ -238,3 +281,22 @@ function vediCommenti(id) {
 
 
 
+
+
+function myFunction() {
+    let input, filter, contatti, a, txtValue;
+    input = document.querySelector('#filtro')
+    filter = input.value.toUpperCase();
+    contatti = document.querySelector('.contacts')
+    utent = contatti.querySelectorAll('.info-card');
+    for (i = 0; i < utent.length; i++) {
+        a = utent[i].getElementsByTagName("span")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            utent[i].style.display = "";
+        } else {
+            utent[i].style.display = "none";
+        }
+    }
+
+}

@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/style.css">
@@ -35,33 +38,44 @@
 
         </div> -->
     </header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Applica Modifiche</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex flex-column mb-2">
+                        <input type="text" class="mb-3 p-2" placeholder="Nome e cognome">
+                        <input type="text" class="mb-3 p-2" placeholder="Username">
+                        <input type="text" class="mb-3 p-2" placeholder="Email">
+                        <input type="text" class="mb-3 p-2" placeholder="Via">
+                        <input type="text" class="mb-3 p-2" placeholder="Numero civico">
+                        <input type="text" class="mb-3 p-2" placeholder="Citta">
+                        <input type="text" class="mb-3 p-2" placeholder="Zipcode">
+                        <input type="text" class="mb-3 p-2" placeholder="Cellulare">
+                        <input type="text" class="mb-3 p-2" placeholder="Sito-Web">
 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary" onclick="modificaDati()">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <main>
         <div class="sinistra">
             <div class="profilo">
-                <!-- CREARE DINAMICAMENTE IN BASE A CHI EFFETTUA LOGIN -->
-                <!-- <div class="immagine">
-                    <img src="images/placeholder.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Nome e Cognome</p>
-                    <p>Città</p>
-                </div> -->
 
             </div>
             <a href="tel:+"></a>
             <div class="info-personali">
-                <!-- CREARE DINAMICAMENTE IN BASE A CHI EFFETTUA LOGIN -->
-                <!-- DECIDERE QUALI CAMPI FAR VEDERE -->
-                <!-- <p> Indirizzo: </p>
-                <p>Email: </p>
-                <p>Campo: </p>
-                <p>Campo: </p>
-                <p>Campo: </p>
-                <button>Modifica dati</button> -->
-                <!-- da vedere se si fa in tempo -->
+
             </div>
 
             <div class="info-personali">
@@ -73,11 +87,15 @@
             </div>
         </div>
 
+
         <div class="centro">
+            <div id="nuovoPost">
+                <a href="#newpost"><i class="bi bi-capslock"></i>New Post</a>
+            </div>
             <div>
-                <div class="newpost">
-                    <input type="text" name="tito" id="" placeholder="Dai un titolo al tuo post... ">
-                    <input type="text" name="contpost" id="" placeholder="Contenuto del post">
+                <div class="newpost" id="newpost">
+                    <input type="text" name="tito" id="title" placeholder="Dai un titolo al tuo post... ">
+                    <input type="text" name="contpost" id="post" placeholder="Contenuto del post">
                     <button onclick="aggiungiPost()">Aggiungi Post</button>
                 </div>
 
@@ -93,8 +111,10 @@
 
 
         <div class="destra">
+
+
             <div>
-                <input id="filtroInput" type="search" placeholder="Search">
+                <input id="filtro" type="text" onkeyup="myFunction()" placeholder="Search">
             </div>
 
             <div class="contacts">
@@ -127,6 +147,10 @@
 
         <p>A -Buildweek- production, &copy;Div=Nonna Pina_ corporation</p>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -13,11 +13,12 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   background-color: #F0F2F5;
   text-align: center;
+  /* overflow: hidden; */
 }
 body h1 {
   font-size: 1.2rem;
@@ -113,9 +114,6 @@ body form div {
 body form div label {
   margin-left: 5px;
 }
-body form p {
-  font-size: 0.8rem;
-}
 body button a {
   text-decoration: none;
   color: black;
@@ -123,7 +121,6 @@ body button a {
 body footer {
   background-color: white;
   box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  height: 5rem;
   margin-top: 2rem;
   text-align: center;
   padding: 2rem;
@@ -135,9 +132,6 @@ body footer section {
   flex-direction: row;
   justify-content: space-around;
   margin: 2rem auto;
-}
-body footer p {
-  font-size: 0.8rem;
 }
 body footer a {
   text-decoration: none;
@@ -181,6 +175,10 @@ body footer a {
   width: 30%;
   margin: 0 auto;
   border-radius: 5px;
+}
+.home .allPost {
+  overflow: hidden;
+  height: 200px;
 }
 .home .allPost div {
   background-color: white;
@@ -290,11 +288,25 @@ body footer a {
 
 .centro {
   width: 30rem;
+  height: 1200px;
+  overflow-y: scroll;
+}
+.centro::-webkit-scrollbar {
+  display: none;
+}
+.centro #nuovoPost {
+  position: fixed;
+  right: 30.2rem;
+  background-color: #eb9e35;
+  opacity: 0.9;
+  padding: 0.2rem;
+  border-radius: 10%;
 }
 .centro .newpost {
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.16);
   background-color: #eee;
   text-align: end;
+  font-size: 0.8rem;
 }
 .centro .newpost input {
   display: block;
@@ -314,9 +326,35 @@ body footer a {
 .centro .newpost button {
   width: 30%;
   margin-right: 2rem;
+  font-size: 0.8rem;
+  background-color: rgba(211, 211, 211, 0.822);
+  color: black;
+  border-top: 2px solid green;
+  border-radius: 0;
+}
+.centro .allPost {
+  margin-top: 4rem;
+  text-align: start;
+}
+.centro .allPost div {
+  margin-bottom: 3rem;
+}
+.centro .allPost div img {
+  width: 478px;
+  height: 260px;
+  margin-bottom: 1rem !important;
+}
+.centro .allPost div button {
+  background-color: #273b7a;
+  width: 30%;
+  margin-right: 2rem;
+  font-size: 0.8rem;
 }
 
-.destra #filtroInput {
+.destra {
+  margin-left: 2rem;
+}
+.destra #filtro {
   width: 80%;
   margin-right: 2rem;
   padding: 1rem;
@@ -366,6 +404,7 @@ body footer a {
   margin: 0;
   border-top: 2px solid #273b7a;
   border-radius: 0;
+  padding: 0.3rem;
 }
 .destra .contacts .info-card button .i {
   margin: 5px;
@@ -376,5 +415,10 @@ body footer a {
   line-height: 3rem;
   padding: 1rem;
 }
+.destra .contacts .info-card .more-info p {
+  margin-bottom: 0;
+}
 
-/* Pagina REGISTRATI *//*# sourceMappingURL=style.css.map */
+.allPost > div {
+  border-top: 2px solid #273b7a;
+}/*# sourceMappingURL=style.css.map */

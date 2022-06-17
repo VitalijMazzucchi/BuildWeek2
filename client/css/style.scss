@@ -23,11 +23,12 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
     font-family: $font;
     background-color: $color_body;
     text-align: center;
+    /* overflow: hidden; */
 
 
     h1 {
@@ -141,9 +142,7 @@ body {
             }
         }
 
-        p {
-            font-size: $piccolo;
-        }
+
     }
 
     button a {
@@ -158,7 +157,6 @@ body {
     footer {
         background-color: white;
         box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-        height: 5rem;
         margin-top: 2rem;
         text-align: center;
         padding: 2rem;
@@ -170,10 +168,6 @@ body {
             flex-direction: row;
             justify-content: space-around;
             margin: 2rem auto;
-        }
-
-        p {
-            font-size: $piccolo;
         }
 
         a {
@@ -230,6 +224,9 @@ body {
     }
 
     .allPost {
+        overflow: hidden;
+        height: 200px;
+
         div {
             background-color: white;
             box-shadow: 2px 5px 11px 0px rgba(0, 0, 0, 0.75);
@@ -252,6 +249,9 @@ body {
 
 
 /* -------------------- HOMEPAGE -------------------- */
+
+
+
 
 #homepage {
     a {
@@ -302,6 +302,7 @@ body {
     i {
         font-size: 1.2rem;
     }
+
 }
 
 .bi-envelope-heart {
@@ -371,11 +372,31 @@ body {
 
 .centro {
     width: 30rem;
+    height: 1200px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    #nuovoPost {
+        position: fixed;
+        right: 30.2rem;
+        background-color: $color1;
+        opacity: 0.9;
+        padding: 0.2rem;
+        border-radius: 10%;
+
+
+    }
+
 
     .newpost {
         box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 16%);
         background-color: $color-input;
         text-align: end;
+        font-size: $piccolo;
+
 
         input {
             display: block;
@@ -399,14 +420,46 @@ body {
         button {
             width: 30%;
             margin-right: 2rem;
+            font-size: $piccolo;
+            background-color: rgba(211, 211, 211, 0.822);
+            color: black;
+            border-top: 2px solid green;
+            border-radius: 0;
+        }
+    }
+
+    .allPost {
+        margin-top: 4rem;
+        text-align: start;
+
+
+
+
+        div {
+            margin-bottom: 3rem;
+
+
+            img {
+                width: 478px;
+                height: 260px;
+                margin-bottom: 1rem !important;
+            }
+
+            button {
+                background-color: $color2;
+                width: 30%;
+                margin-right: 2rem;
+                font-size: 0.8rem;
+            }
         }
     }
 }
 
 
 .destra {
+    margin-left: 2rem;
 
-    #filtroInput {
+    #filtro {
         width: 80%;
         margin-right: 2rem;
         padding: 1rem;
@@ -465,6 +518,8 @@ body {
                 margin: 0;
                 border-top: 2px solid $color2;
                 border-radius: 0;
+                padding: 0.3rem;
+
 
                 .i {
                     margin: 5px;
@@ -476,6 +531,10 @@ body {
                 margin-top: 0.5rem;
                 line-height: 3rem;
                 padding: 1rem;
+
+                p {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -484,17 +543,7 @@ body {
 
 
 
+.allPost>div {
+    border-top: 2px solid $color2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Pagina REGISTRATI */
+}

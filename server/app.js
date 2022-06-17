@@ -4422,9 +4422,9 @@ app.post('/api/users/login/', (request, response) => {
 
 // PUT
 app.put('/api/users/:id', (request, response) => {
-    const id = request.params.id;
-    const obj_mod = request.body;
-    let obj = users.find(ele => ele.id === +id);
+    let id = request.params.id;
+    let obj_mod = request.body;
+    let obj = users.find(ele => ele.id === id);
     obj = obj_mod;
     response.json('Utente Modificato nel DB');
 })
